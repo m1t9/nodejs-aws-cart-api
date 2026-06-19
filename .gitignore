@@ -38,3 +38,12 @@ lerna-debug.log*
 !.elasticbeanstalk/*.global.yml
 
 .env
+
+# AWS CDK output
+/cdk/cdk.out
+/cdk/.env
+/cdk/node_modules
+
+.bundle
+.bundle/*
+dist
