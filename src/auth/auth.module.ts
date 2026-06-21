@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 
@@ -13,7 +12,6 @@ const { secret, expiresIn } = JWT_CONFIG;
 
 @Module({
   imports: [
-    ConfigModule,
     UsersModule,
     PassportModule, //.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({ secret, signOptions: { expiresIn } }),
